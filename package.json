@@ -1,0 +1,25 @@
+{
+  "name": "gpa_pwa",
+  "version": "1.0.0",
+  "description": "Gpa Tracker",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuaduke/gradeTracker.git"
+  },
+  "author": "Joshua Duke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuaduke/gradeTracker/issues"
+  },
+  "homepage": "https://github.com/joshuaduke/gradeTracker#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
