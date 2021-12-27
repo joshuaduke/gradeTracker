@@ -1,12 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Semesters Page</h1>
-</body>
-</html>
+<%- include('partials/header.ejs')  %> 
+
+<section>
+    <nav class="container">
+        <div class="row  py-3">
+            <div class="col text-start">
+                <a href="#">
+                    <i class="fas fa-times-circle fa-lg"></i>
+                </a>
+            </div>
+
+            <div class="col text-center">
+                <span>Semesters</span>
+            </div>
+
+            <div class="col text-end">
+                <a href="/edit_semesters">
+                    <span>Edit</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="text-center py-3">
+        <p>Tap a Semester to make it the current semester</p>
+    </div>
+    <main>
+        <ul class="list-group">
+            <a href="#">
+                <li class="py-3 list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    Fall 2019
+                    <span class="badge bg-success badge-pill">GPA: 3.8</span>
+                </li>
+            </a>
+            <a href="#">
+                <li class="py-3 list-group-item list-group-item-action d-flex justify-content-between align-items-cente active">
+                    Fall 2018
+                    <span class="badge bg-warning badge-pill">GPA: 2.8</span>
+                </li>
+            </a>
+            <a href="#">
+                <li class="py-3 list-group-item list-group-item-action d-flex justify-content-between align-items-cente">
+                    Fall 2020
+                    <span class="badge bg-danger badge-pill">GPA: 1.4</span>
+                </li>
+            </a>
+        </ul>
+    </main>
+</section>
+
+<%- include('partials/footer.ejs')  %> 
