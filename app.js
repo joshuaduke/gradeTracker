@@ -4,20 +4,25 @@ const app = express();
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
+app.use(express.static(__dirname + 'views'));
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res)=>{
-    res.redirect('/semesters');
-})
+// app.get('/', (req, res)=>{
+//     res.redirect('/semesters');
+// })
 
 //Routes for semesters
 
-app.get('/semesters', (req,res)=>{
+app.get('/', (req,res)=>{
     res.render('semesters');
 })
 
 app.get('/edit_semesters', (req, res)=>{
     res.render('semesters_edit');
+})
+
+app.get('/fallback', (req, res)=>{
+    res.render('fallback');
 })
 
 app.post('/edit_semesters', (req, res)=>{
