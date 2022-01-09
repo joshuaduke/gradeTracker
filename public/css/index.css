@@ -91,3 +91,14 @@ nav {
     font-size:1.3em;
     padding:.5em;
 }
+
+
+/******** SCALE *******/
+input[type='checkbox']{
+    width:20px;
+    height:20px;
+}
+
+#scale_heading{
+    font-size: .6em;
+}

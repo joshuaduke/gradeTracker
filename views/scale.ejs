@@ -1,0 +1,57 @@
+<%- include('partials/header.ejs')  %> 
+
+<main>
+    <nav class="py-1 px-3">
+        <div class="row  py-3">
+            <div class="col text-start">
+                <button onclick="history.back()">
+                    Back
+                </button>
+            </div>
+
+            <div class="col text-center">
+                <span>Seneca College</span>
+            </div>
+
+            <div class="col text-end">
+                <!-- <a href="/">
+                    <span>Edit</span>
+                </a> -->
+            </div>
+        </div>
+    </nav>
+
+    <section id="scale">
+        <div class="row" >
+            <ul class="row px-3 pt-3" id="scale_heading">
+                <li class="col">
+                    <p>Grade Letter</p>
+                </li>
+                <li class="col">
+                    <p class="text-center">
+                        Min <br> (Inclusive)
+                    </p>
+                </li>
+                <li class="col">
+                    <p class="text-end">Value</p>
+                </li>
+            </ul>
+
+            <ul class="row border-bottom border-secondary px-3 pb-3">
+                <li class="col">
+                    <p><input type="checkbox" class="pt-1" checked> A+</p>
+                </li>
+                <li class="col">
+                    <p class="text-center">90.0</p>
+                </li>
+                <li class="col">
+                    <p class="text-end">4.00</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<%- include('partials/navbar.ejs')  %> 
+<%- include('partials/footer.ejs')  %> 
+

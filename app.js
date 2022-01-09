@@ -77,6 +77,20 @@ app.get('/cgpa', (req, res)=>{
     res.render('gpa');
 })
 
+app.get('/scales', (req, res)=>{
+    res.render('scale_list');
+})
+
+app.get('/scale', (req, res)=>{
+    res.render('scale')
+})
+
+
+
+/************************** Routes for Settings ************************************/
+app.get('/settings', (req, res)=>{
+    res.render('account');
+})
 
 /************************** Route for Fallback ************************************/
 app.get('/fallback', (req, res)=>{
@@ -88,3 +102,28 @@ app.get('/fallback', (req, res)=>{
 app.listen(process.env.PORT || 3000, ()=>{
     console.log('Server has started...');
 })
+
+
+//User
+/*
+    First name 
+    Last name
+    email
+    CGPA
+    Semesters
+    etc...
+*/
+
+// Seneca College Scale
+[
+    {"ninety": "4.00"},
+    {"eighty": "4.00"},
+    {"seventy-five": "3.50"},
+    {"seventy": "3.00"},
+    {"sixty-five": "2.50"},
+    {"sixty": "2.00"},
+    {"fifty-five": "1.50"},
+    {"fifty": "1.00"},
+    {"zero": "0.00"}
+]
+
