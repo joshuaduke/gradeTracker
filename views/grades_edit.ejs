@@ -1,0 +1,113 @@
+<%- include('partials/header.ejs')  %> 
+
+<main>
+    <header class="p-3" id="courses_Header">
+        <ul class="row">
+            <li class="col">
+                <a href="/courses">
+                    <p class="text-start">Courses</p>
+                </a>
+            </li>
+            <li class="col">
+                <p class="text-center">Course Name</p>
+            </li>
+            <li class="col">
+                <a href="/grades">
+                    <p class="text-end">Save</p>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="row text-center pb-3" id="courses_Stats">
+        <div class="col">
+            <p>Total Possible</p>
+            <p>100%</p>
+        </div>
+    </section>
+
+    <section id="course_List">
+        <section class="addNew text-center py-3">
+            <a href="/grade_item">
+                <p>New Assignment</p>
+                <i class="fas fa-plus-circle fa-lg"></i>
+            </a>
+        </section>
+        <form action="">
+            <div class="course_item py-3 border-bottom border-secondary">
+                <div class="row justify-content-between">
+                    <div class="col-1">
+                        <button type="submit" class="btn btn-danger py-2 px-1 ms-3 col">Delete</button>
+                    </div>
+
+                    <div class="col-7">
+                        <p class="py-2 text-left ms-3">Assignment 1</p>
+                    </div>
+
+                    <div class="mx-3 text-center col-2 ">
+
+                        <a href="/grade_item">
+                            <span style="font-size: 8px;" class="d-block">Weight</span>
+                            <p><span>33.3</span>%</p>
+                        </a>
+
+                    </div>
+        
+                    <!-- Dynamic Input -->
+                    <!-- <div class="mx-3 text-center col-2 ">
+                        <span style="font-size: 8px;" class="d-block">Weight</span>
+                        
+                        <span>
+                            <input type="text" name="name" value="33.3" class="course_grade" maxlength="4">
+                            %
+                        </span>
+                    </div> -->
+                </div>
+            </div>
+            
+            <div class="course_item py-3 border-bottom border-secondary">
+                <div class="row justify-content-between">
+                    <div class="col-1">
+                        <button type="submit" class="btn btn-danger py-2 px-1 ms-3 col">Delete</button>
+                    </div>
+
+                    <div class="col-7">
+                        <p class="py-2 text-left ms-3">Assignment 1</p>
+                    </div>
+        
+                    <div class="mx-3 text-center col-2 ">
+                        <span style="font-size: 8px;" class="d-block">Weight</span>
+                        
+                        <span>
+                            <input type="text" name="name" value="33.3" class="course_grade" maxlength="4">
+                            %
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <%- include('partials/navbar.ejs')  %> 
+</main>
+
+<script>
+ const courseGrade = document.querySelectorAll('.course_grade');
+
+ courseGrade.forEach(grade =>{
+    grade.addEventListener('input', resizeInput)
+ resizeInput.call(grade);
+})
+
+
+function resizeInput(){
+    if(this.value !== ''){
+        if (this.value.length <= 4) {
+            this.style.width = this.value.length + "ch";
+        }
+    } else {
+        this.style.width = 4 + "ch";
+    }
+}
+</script>
+
+<%- include('partials/footer.ejs')  %> 

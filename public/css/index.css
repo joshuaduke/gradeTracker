@@ -1,12 +1,30 @@
+:root{
+    --primary-bg-color:#272932;
+    --secondary-bg-color:#9E90A2;
+    --text-color:#FFFAFF;
+    --accent-color:#B6C2D9;
+}
+
 *{
+    margin:0 !important;
+    padding:0 !important;
+    line-height: 1.4em !important;
+    box-sizing: border-box !important;
+}
+
+.noPadding{
     margin:0;
     padding:0;
-    line-height: 1.4em;
-    box-sizing: border-box;
 }
 
 a{
     text-decoration: none;
+    color: var(--text-color); 
+}
+
+ul{
+    list-style-type: none;
+
 }
 
 body{
@@ -14,5 +32,62 @@ body{
 }
 
 nav{
-    background: tan;
+    padding:20px 0;
+}
+
+main{
+    height:100vh;
+    width:100%;
+}
+
+#courses_Header, 
+#courses_Stats, 
+nav {
+    background-color: var(--primary-bg-color);
+    width: 100%;
+    color: var(--text-color); 
+}
+
+/***** SEMESTERS *****/
+.list-group-item{
+    background-color: var(--secondary-bg-color);
+    color:var(--text-color);
+}
+
+.active{
+    background-color: var(--accent-color) !important;
+}
+
+.input_Save{
+    background:none;
+    border: none;
+    color:var(--text-color);
+}
+
+/****** *******/
+
+/***** COURSES *****/
+#courses_Header{
+ 
+}
+
+#course_List{
+    padding:10px 0;
+}
+
+.course_item{
+    display: inline-block;
+    width:100%;
+    padding:10px 0;
+}
+
+.course_item:nth-child(even){
+    background-color: var(--secondary-bg-color);
+}
+
+.course_grade{
+    background:none;
+    border:none;
+    font-size:1.3em;
+    padding:.5em;
 }

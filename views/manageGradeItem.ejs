@@ -1,0 +1,60 @@
+<%- include('partials/header.ejs')  %> 
+
+<main>
+    <form action="">    
+        <header class="p-3" id="courses_Header">
+            <ul class="row">
+                <li class="col text-start">
+                    <a href="/courses">Back</a>
+                </li>
+
+                <li class="col text-end">
+                    <input type="submit" value="Submit">
+                </li>
+            </ul>
+        </header>
+
+        <section class="row text-center pb-3" id="courses_Stats">
+            <div>
+                <h2>Add new Item</h2>    
+            </div>
+        </section>
+
+        <section id="course_List" class="px-3">
+
+            
+                <div class="input-group my-3">
+                    <span class="input-group-text">Item Name</span>
+                    <input class="form-control p-1" ype="text" placeholder="Final Exam">
+                </div>
+
+                <div class="input-group my-3">
+                    <span class="input-group-text">Weight</span>
+                    <input class="form-control p-1" type="text" placeholder="25%">
+                </div>
+        </section>
+    </form>
+    <%- include('partials/navbar.ejs')  %> 
+</main>
+
+<script>
+ const courseGrade = document.querySelectorAll('.course_grade');
+
+ courseGrade.forEach(grade =>{
+    grade.addEventListener('input', resizeInput)
+ resizeInput.call(grade);
+})
+
+
+function resizeInput(){
+    if(this.value !== ''){
+        if (this.value.length <= 4) {
+            this.style.width = this.value.length + "ch";
+        }
+    } else {
+        this.style.width = 4 + "ch";
+    }
+}
+</script>
+
+<%- include('partials/footer.ejs')  %> 

@@ -1,0 +1,38 @@
+<%- include('partials/header.ejs')  %> 
+
+<main>
+    <form action="/edit_semesters" method="post">
+        <nav>
+            <div class="row  p-3">
+                <div class="col text-start">
+                    <a href="/edit_semesters">
+                        <i class="fas fa-times-circle fa-lg"></i>
+                    </a>
+                </div>
+    
+                <div class="col text-center">
+                    <span>Add New Courses</span>
+                </div>
+    
+                <div class="col text-end">
+                    <a href="#">
+                        <input type="submit" name="semesterEdit" value="Save" class="input_Save"></input>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <ul class="list-group">
+            <li class="py-3 list-group-item">
+
+                <div class="input-group d-flex justify-content-between align-items-center px-4">
+                    <span class="input-group-text p-1">Name</span>
+
+                    <input type="text" name="semesterName" id="" placeholder="WEB 322" class="form-control p-1" autocomplete="off">
+                </div>
+            </li>
+        </ul>
+    </form>
+</main>
+
+<%- include('partials/footer.ejs')  %> 
